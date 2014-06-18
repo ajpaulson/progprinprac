@@ -70,7 +70,7 @@ struct Range_error : out_of_range
 // trivially range-checked vector (no iterator checking):
 template <class T> struct Vector : public std::vector<T>
 {
-  using std::size_type = typename std::vector<T>::size_type;
+  using size_type = typename std::vector<T>::size_type;
 
 #ifdef _MSC_VER
   // microsoft doesn't yet support C++11 inheriting constructors
